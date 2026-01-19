@@ -1,0 +1,218 @@
+{
+  "keywords": [
+    "and", "break", "do", "else", "elseif", "end", "false", "for", "function",
+    "if", "in", "local", "nil", "not", "or", "repeat", "return", "then",
+    "true", "until", "while"
+  ],
+
+  "globals": [
+    "_G", "getgenv", "shared", "script", "game", "workspace", "Enum", "Instance",
+    "Vector2", "Vector3", "CFrame", "Color3", "UDim", "UDim2", "BrickColor",
+    "Ray", "NumberRange", "Rect", "DateTime", "task", "spawn", "delay", "wait",
+    "tick", "time", "print", "warn", "error", "assert", "collectgarbage",
+    "pcall", "xpcall", "typeof", "type", "unpack", "select", "next", "ipairs",
+    "pairs", "rawequal", "rawget", "rawset", "setrawmetatable", "getrawmetatable",
+    "hookfunction", "hookmetamethod", "getgc", "getrenv", "getloadedmodules",
+    "gethui", "syn", "fluxus", "krnl", "bit32"
+  ],
+
+  "services": [
+    "Players", "ReplicatedStorage", "ServerStorage", "ServerScriptService",
+    "StarterGui", "StarterPlayer", "Lighting", "RunService", "UserInputService",
+    "TweenService", "SoundService", "MarketplaceService", "HttpService",
+    "ContentProvider", "TeleportService", "ContextActionService",
+    "GuiService", "Chat", "TextChatService", "DataStoreService",
+    "PathfindingService", "Debris", "CollectionService", "PhysicsService"
+  ],
+
+  "functions": [
+    {"label": "print", "insert": "print(${1:...})"},
+    {"label": "warn", "insert": "warn(${1:...})"},
+    {"label": "error", "insert": "error(${1:message}, ${2:level})"},
+    {"label": "assert", "insert": "assert(${1:condition}, ${2:message})"},
+    {"label": "wait", "insert": "wait(${1:seconds})"},
+    {"label": "task.wait", "insert": "task.wait(${1:seconds})"},
+    {"label": "task.spawn", "insert": "task.spawn(function()\n\t$0\nend)"},
+    {"label": "task.defer", "insert": "task.defer(function()\n\t$0\nend)"},
+    {"label": "task.delay", "insert": "task.delay(${1:time}, function()\n\t$0\nend)"},
+    {"label": "pcall", "insert": "pcall(function()\n\t$0\nend)"},
+    {"label": "xpcall", "insert": "xpcall(function()\n\t$0\nend, ${1:errHandler})"}
+  ],
+
+  "modules": {
+    "math": {
+      "members": [
+        {"label": "abs", "insert": "math.abs(${1:x})"},
+        {"label": "acos", "insert": "math.acos(${1:x})"},
+        {"label": "asin", "insert": "math.asin(${1:x})"},
+        {"label": "atan", "insert": "math.atan(${1:x})"},
+        {"label": "atan2", "insert": "math.atan2(${1:y}, ${2:x})"},
+        {"label": "ceil", "insert": "math.ceil(${1:x})"},
+        {"label": "clamp", "insert": "math.clamp(${1:value}, ${2:min}, ${3:max})"},
+        {"label": "cos", "insert": "math.cos(${1:x})"},
+        {"label": "deg", "insert": "math.deg(${1:x})"},
+        {"label": "exp", "insert": "math.exp(${1:x})"},
+        {"label": "floor", "insert": "math.floor(${1:x})"},
+        {"label": "fmod", "insert": "math.fmod(${1:x}, ${2:y})"},
+        {"label": "huge"},
+        {"label": "log", "insert": "math.log(${1:x}, ${2:base})"},
+        {"label": "max", "insert": "math.max(${1:...})"},
+        {"label": "min", "insert": "math.min(${1:...})"},
+        {"label": "noise", "insert": "math.noise(${1:x}, ${2:y}, ${3:z})"},
+        {"label": "pi"},
+        {"label": "pow", "insert": "math.pow(${1:x}, ${2:y})"},
+        {"label": "rad", "insert": "math.rad(${1:x})"},
+        {"label": "random", "insert": "math.random(${1:m}, ${2:n})"},
+        {"label": "randomseed", "insert": "math.randomseed(${1:seed})"},
+        {"label": "round", "insert": "math.round(${1:x})"},
+        {"label": "sign", "insert": "math.sign(${1:x})"},
+        {"label": "sin", "insert": "math.sin(${1:x})"},
+        {"label": "sqrt", "insert": "math.sqrt(${1:x})"},
+        {"label": "tan", "insert": "math.tan(${1:x})"}
+      ]
+    },
+    "string": {
+      "members": [
+        {"label": "byte", "insert": "string.byte(${1:s}, ${2:i})"},
+        {"label": "char", "insert": "string.char(${1:...})"},
+        {"label": "find", "insert": "string.find(${1:s}, ${2:pattern}, ${3:init}, ${4:plain})"},
+        {"label": "format", "insert": "string.format(${1:format}, ${2:...})"},
+        {"label": "gmatch", "insert": "for match in string.gmatch(${1:s}, ${2:pattern}) do\n\t$0\nend"},
+        {"label": "gsub", "insert": "string.gsub(${1:s}, ${2:pattern}, ${3:repl})"},
+        {"label": "len", "insert": "string.len(${1:s})"},
+        {"label": "lower", "insert": "string.lower(${1:s})"},
+        {"label": "match", "insert": "string.match(${1:s}, ${2:pattern})"},
+        {"label": "rep", "insert": "string.rep(${1:s}, ${2:n})"},
+        {"label": "reverse", "insert": "string.reverse(${1:s})"},
+        {"label": "split", "insert": "string.split(${1:s}, ${2:sep})"},
+        {"label": "sub", "insert": "string.sub(${1:s}, ${2:start}, ${3:end})"},
+        {"label": "upper", "insert": "string.upper(${1:s})"}
+      ]
+    },
+    "table": {
+      "members": [
+        {"label": "concat", "insert": "table.concat(${1:tbl}, ${2:sep})"},
+        {"label": "create", "insert": "table.create(${1:count}, ${2:value})"},
+        {"label": "find", "insert": "table.find(${1:tbl}, ${2:value})"},
+        {"label": "insert", "insert": "table.insert(${1:tbl}, ${2:value})"},
+        {"label": "move", "insert": "table.move(${1:src}, ${2:from}, ${3:to}, ${4:destIndex}, ${5:dest})"},
+        {"label": "pack", "insert": "table.pack(${1:...})"},
+        {"label": "remove", "insert": "table.remove(${1:tbl}, ${2:index})"},
+        {"label": "sort", "insert": "table.sort(${1:tbl}, ${2:compareFunc})"},
+        {"label": "unpack", "insert": "table.unpack(${1:tbl})"}
+      ]
+    }
+  },
+
+  "classes": [
+    {
+      "label": "Instance",
+      "members": [
+        {"label": "new", "insert": "Instance.new(\"${1:ClassName}\", ${2:parent})"},
+        {"label": "Clone", "insert": ":Clone()"},
+        {"label": "Destroy", "insert": ":Destroy()"},
+        {"label": "ClearAllChildren", "insert": ":ClearAllChildren()"},
+        {"label": "FindFirstChild", "insert": ":FindFirstChild(\"${1:name}\")"},
+        {"label": "FindFirstChildWhichIsA", "insert": ":FindFirstChildWhichIsA(\"${1:class}\")"},
+        {"label": "WaitForChild", "insert": ":WaitForChild(\"${1:name}\", ${2:timeout})"},
+        {"label": "GetChildren", "insert": ":GetChildren()"},
+        {"label": "GetDescendants", "insert": ":GetDescendants()"},
+        {"label": "GetFullName", "insert": ":GetFullName()"},
+        {"label": "IsA", "insert": ":IsA(\"${1:className}\")"},
+        {"label": "IsAncestorOf", "insert": ":IsAncestorOf(${1:instance})"},
+        {"label": "IsDescendantOf", "insert": ":IsDescendantOf(${1:instance})"}
+      ]
+    },
+    {
+      "label": "Player",
+      "members": [
+        {"label": "Kick", "insert": ":Kick(${1:message})"},
+        {"label": "LoadCharacter", "insert": ":LoadCharacter()"},
+        {"label": "Character", "kind": "Property"},
+        {"label": "CharacterAdded", "insert": ".CharacterAdded:Connect(function(character)\n\t$0\nend)"},
+        {"label": "Chatted", "insert": ".Chatted:Connect(function(msg)\n\t$0\nend)"},
+        {"label": "UserId", "kind": "Property"},
+        {"label": "Name", "kind": "Property"},
+        {"label": "DisplayName", "kind": "Property"}
+      ]
+    },
+    {
+      "label": "Humanoid",
+      "members": [
+        {"label": "TakeDamage", "insert": ":TakeDamage(${1:amount})"},
+        {"label": "ChangeState", "insert": ":ChangeState(Enum.HumanoidStateType.${2:Running})"},
+        {"label": "MoveTo", "insert": ":MoveTo(${1:Vector3})"},
+        {"label": "Died", "insert": ".Died:Connect(function()\n\t$0\nend)"},
+        {"label": "Health", "kind": "Property"},
+        {"label": "MaxHealth", "kind": "Property"},
+        {"label": "WalkSpeed", "kind": "Property"},
+        {"label": "JumpPower", "kind": "Property"}
+      ]
+    },
+    {
+      "label": "Part",
+      "members": [
+        {"label": "Position", "kind": "Property"},
+        {"label": "CFrame", "kind": "Property"},
+        {"label": "Size", "kind": "Property"},
+        {"label": "Color", "kind": "Property"},
+        {"label": "Material", "kind": "Property"},
+        {"label": "Transparency", "kind": "Property"},
+        {"label": "Anchored", "kind": "Property"},
+        {"label": "CanCollide", "kind": "Property"}
+      ]
+    },
+    {
+      "label": "RemoteEvent",
+      "members": [
+        {"label": "FireServer", "insert": ":FireServer(${1:...})"},
+        {"label": "OnClientEvent", "insert": ".OnClientEvent:Connect(function(${1:...})\n\t$0\nend)"}
+      ]
+    },
+    {
+      "label": "RemoteFunction",
+      "members": [
+        {"label": "InvokeServer", "insert": ":InvokeServer(${1:...})"},
+        {"label": "OnClientInvoke", "insert": ".OnClientInvoke = function(${1:...})\n\t$0\nend"}
+      ]
+    },
+    {
+      "label": "Drawing",
+      "members": [
+        {"label": "new", "insert": "Drawing.new(\"${1:Line|Circle|Square|Text|Triangle|Quad|Image}\")"},
+        {"label": "Remove", "insert": ":Remove()"},
+        {"label": "Visible", "kind": "Property"},
+        {"label": "ZIndex", "kind": "Property"},
+        {"label": "Transparency", "kind": "Property"},
+        {"label": "Color", "kind": "Property"},
+        {"label": "Thickness", "kind": "Property"},
+        {"label": "Filled", "kind": "Property"},
+        {"label": "Radius", "kind": "Property"},
+        {"label": "Position", "kind": "Property"},
+        {"label": "Size", "kind": "Property"},
+        {"label": "Center", "kind": "Property"},
+        {"label": "From", "kind": "Property"},
+        {"label": "To", "kind": "Property"},
+        {"label": "Text", "kind": "Property"},
+        {"label": "Font", "kind": "Property"},
+        {"label": "Outline", "kind": "Property"},
+        {"label": "OutlineColor", "kind": "Property"}
+      ]
+    }
+  ],
+
+  "enums": [
+    "Enum.KeyCode", "Enum.UserInputType", "Enum.Material", "Enum.Font",
+    "Enum.HumanoidStateType", "Enum.EasingStyle", "Enum.EasingDirection",
+    "Enum.PartType", "Enum.RaycastFilterType", "Enum.NormalId"
+  ],
+
+  "snippets": [
+    {"label": "for i,v in pairs", "insert": "for i,v in pairs(${1:table}) do\n\t$0\nend"},
+    {"label": "for i,v in ipairs", "insert": "for i,v in ipairs(${1:table}) do\n\t$0\nend"},
+    {"label": "function()", "insert": "function(${1:...})\n\t$0\nend"},
+    {"label": "if then else", "insert": "if ${1:condition} then\n\t$2\nelse\n\t$0\nend"},
+    {"label": "while true do", "insert": "while true do\n\t$0\n\twait()\nend"},
+    {"label": "game:GetService", "insert": "game:GetService(\"${1:Players}\")"}
+  ]
+}
